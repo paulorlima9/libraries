@@ -1,0 +1,38 @@
+{
+    "name": "paulorlima9/libraries",
+    "description": "Libraries Packages",
+    "type": "library",
+    "autoload": {
+        "files": [
+            "src/Multipay/helpers.php",
+            "src/Exchanger/helpers.php"
+        ],
+        "psr-4": {
+            "Modules\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "illuminate/support": "^9.43",
+        "illuminate/console": "^9.43",
+        "illuminate/cache": "^9.43",
+        "illuminate/database": "^9.43",
+        "illuminate/http": "^9.43",
+        "illuminate/routing": "^9.43",
+        "akaunting/laravel-money": "^3.1",
+        "paypal/paypal-checkout-sdk": "^1.0",
+        "stripe/stripe-php": "^10.1",
+        "openpayu/openpayu": "^2.3",
+        "mollie/mollie-api-php": "^2.48"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Multipay\\MultipayServiceProvider",
+                "Modules\\Landing\\LandingServiceProvider",
+                "Modules\\Exchanger\\ExchangerServiceProvider"
+            ]
+        }
+    }
+}
