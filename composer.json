@@ -2,11 +2,9 @@
     "name": "paulorlima9/libraries",
     "description": "Libraries Packages",
     "type": "library",
+    "license": "MIT",
     "autoload": {
-        "files": [
-            "src/Multipay/helpers.php",
-            "src/Exchanger/helpers.php"
-        ],
+        "files": ["src/Multipay/helpers.php", "src/Exchanger/helpers.php"],
         "psr-4": {
             "Modules\\": "src/"
         }
@@ -28,11 +26,7 @@
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "Modules\\Multipay\\MultipayServiceProvider",
-                "Modules\\Landing\\LandingServiceProvider",
-                "Modules\\Exchanger\\ExchangerServiceProvider"
-            ]
+            "providers": ["Modules\\Multipay\\MultipayServiceProvider", "Modules\\Landing\\LandingServiceProvider", "Modules\\Exchanger\\ExchangerServiceProvider"]
         }
     }
 }
